@@ -9,13 +9,7 @@ const port = 5000;
 app.use(express.static("./public"));
 app.use(express.json());
 
-// app.get("/", (req, res) => {
-//   res.send("this is my home page");
-// });
-
 app.use("/api", taskRoutes);
-// console.log("hieu", taskRoutes);
-// console.log(userRoutes);
 app.use("/api", userRoutes);
 
 const start = async () => {
